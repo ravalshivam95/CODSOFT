@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	int n,check, attemp = 0;
+	srand(time(0)); 
+	n= rand() % 100 + 1; 
+	cout<<"Raval Shivam Bharatbhai\n\n";
+	cout<<"CODSOFT\n\n";
+	cout << "guess Game Task - 1\n";
+
+	do
+	{
+		cout << "Enter a guess between 1 and 100 :\t ";
+		cin >> check;
+		attemp++;
+
+		if (check > n)
+		
+		cout << "Too high!\n\n";
+		else if (check < n)
+		
+		cout << "Too low!\n\n";
+		else
+			
+		cout << "\nCorrect! You got it in " << attemp << " guesses!\n";
+	} 
+	while (check != n);
+
+	return 0;
+}
