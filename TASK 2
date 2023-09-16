@@ -1,1 +1,41 @@
+#include<iostream>
+using namespace std;
 
+int main()
+{
+    double n1,n2;
+    char choice;
+
+    cout<<"Enter the first number\n";
+    cin>>n1;
+    cout<<"Enter the second number\n";
+    cin>>n2;
+    cout<<"Enter Choice";
+    cin>>choice;
+    double output;
+
+    switch(choice)
+    {
+        case '+' : 
+        output=n1+n2;
+        cout<<"ADDITION = "<<output<<endl;
+        break;
+        case  '-':
+        output=n1-n2;
+        cout<<"SUBSTRACTION= "<<output<<endl;
+        break;
+        case  '*':
+        output=n1*n2;
+        cout<<"MULTIPLICATION = "<<output<<endl;
+        break;
+        case '/':
+        output=n1/n2;
+        cout<<"DIVISION = "<<output<<endl;
+        break;
+        
+    default:
+    cout<<"Invalid option";
+
+    }
+    return 0;
+}
