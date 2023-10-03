@@ -11,7 +11,6 @@ struct Task {
     Task(const string& desc) : description(desc), completed(false) {}
 };
 
-// Function to display the to-do list
 void displayTasks(const vector<Task>& tasks) {
     cout << "To-Do List:" << endl;
     for (int i = 0; i < tasks.size(); ++i) {
@@ -24,14 +23,13 @@ void displayTasks(const vector<Task>& tasks) {
     cout << endl;
 }
 
-// Function to add a task to the list
 void addTask(vector<Task>& tasks, const string& description) {
     Task newTask(description);
     tasks.push_back(newTask);
     cout << "Task added successfully!" << endl;
 }
 
-// Function to mark a task as completed
+
 void markTaskAsCompleted(vector<Task>& tasks, int taskNumber) {
     if (taskNumber >= 1 && taskNumber <= tasks.size()) {
         tasks[taskNumber - 1].completed = true;
@@ -41,7 +39,6 @@ void markTaskAsCompleted(vector<Task>& tasks, int taskNumber) {
     }
 }
 
-// Function to remove a task from the list
 void removeTask(vector<Task>& tasks, int taskNumber) {
     if (taskNumber >= 1 && taskNumber <= tasks.size()) {
         tasks.erase(tasks.begin() + taskNumber - 1);
